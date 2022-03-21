@@ -1,0 +1,526 @@
+/*STYLESHEET FOR ALL PAGES EXCEPT INDEX*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-decoration: none;
+}
+
+/*Layout for min breakpoint*/
+
+body{
+    background-color: #ffffff;
+}
+
+/*
+
+
+HEADER
+
+
+
+*/
+
+
+#page{
+    display: grid;
+    grid-template-rows: 150px 4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "main"
+                         ;
+    gap: 5px;
+}
+
+#page #header{
+    grid-area: header;
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-areas: "head";
+    height: 150px;
+    overflow: hidden;
+    position: fixed;
+    margin-bottom: 151px;
+}
+
+#page .header-background{
+    grid-area: head;
+    display: flex;
+    z-index: -1;
+    height: 100%;
+    background-image: url(coast-pic.png);
+    background-color:#135e7e20;
+}
+
+#page .header-background video{
+    height: fit-content;
+    width: 100%;
+}
+
+#page .background-overlay{
+    grid-area: head;
+    background-color: #135e7e;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+
+.page-header{
+    grid-area: head;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo"
+                         "nav";
+    
+    margin-bottom: auto;
+    background-color: #00000030;
+}
+
+
+.page-header #logo{
+    grid-area: logo;
+    /* background-color: #135e7e50; */
+    font-family: "Sansita Swashed", cursive;
+    border-bottom: solid 5px #DDC5A3;
+    text-shadow: 2px 2px #DDC5A3;
+    font-size: 1.5em;
+    padding:2.5%;
+    
+    
+}
+
+
+.page-header #logo a{
+    color: #ffffff;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+
+.page-header #nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+      
+}
+
+.page-header #nav a{
+    font-family: "Antonio", serif;
+    text-decoration: none;
+    text-align: center;
+    font-size:1.5em;
+    /* background-color:#135e7e; */
+    color: #ffffff;
+    padding: 15px;
+}
+
+.page-header #nav a:hover{
+    /* background-color: #DDC5A3; */
+    font-size: 1.8em;
+    color: #DDC5A3;
+}
+
+
+
+/*
+
+
+MAIN CONTENT
+
+
+
+*/
+
+
+
+/*
+
+EAT
+
+*/
+
+#page-main{
+    grid-area: main;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
+
+.main-title{
+    width: 95%;
+    /* background-color: #DDC5A3; */
+    background-color: #135e7e80;
+    margin: auto;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border: solid 3px #DDC5A3;
+    padding-bottom: 5px;
+}
+
+.main-title h1{
+    font-family: "Sansita Swashed";
+    font-size: 3.5em;
+    text-shadow: 3px 3px #135e7e;
+}
+
+.main-title h3, h4{
+    font-family: "Antonio";
+    font-size: 3em;
+    text-shadow: 3px 3px #135e7e;
+    color: #ffffff;
+}
+
+/* .main-options{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: auto;
+} */
+
+.main-options h3{
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Antonio", cursive;
+    font-size: 3em;
+    color: #135e7e;
+    text-shadow: 3px 2px  #ddc5a3;
+    margin-bottom: 20px;
+    border-bottom: solid 3px #ddc5a3;
+}
+
+.main-options b{
+    font-family: "Sansita Swashed", cursive;
+    font-size: 2em;
+    color:#DDC5A3;
+    text-shadow: 3px 2px #135e7e;
+}
+
+.main-options ul{
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 1.75em;
+    width: 90%;
+    margin: auto;
+    list-style-type: none;
+}
+
+.main-options ul li{
+    background-color: #ddc5a3;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: #135e7e;
+    
+}
+
+.main-options ul li:hover{
+    background-color: #135e7e;
+    color: #ffffff;
+}
+
+.option{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto-fit);
+    width: 90%;
+    margin: auto;
+}
+
+.option h2{
+    text-align: center;
+    font-family: "Antonio", cursive;
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #135e7e;
+    text-shadow: 3px 2px  #ddc5a3;
+    line-height: 2.5em;
+    margin-bottom: 5px;
+}
+
+.option .option-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr .5fr;
+    grid-template-areas: "image"
+                         "detail";
+    margin-top: 10px;
+    margin: auto;
+    width: 95%;
+    background-color: #ddc5a3;
+    padding: 10px 5px;
+    border-top: solid 5px #ffffff;
+}
+
+.option-menu .image{
+    grid-area: image;
+    text-align: center;
+}
+
+.option-menu .image img{
+    width: 90%;
+    border: solid 3px white;
+    height: 200px;
+}
+
+.option-menu .detail{
+    grid-area: detail;
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    width: 95%;
+    margin: auto;
+}
+
+.option-menu .detail h5{
+    font-family: "Caveat", cursive;
+    font-size: 1.75em;
+    color:#135e7e;
+    padding: 5px 0px;
+}
+
+.option-menu .detail h5:hover{
+    color: #ddc5a3;
+}
+
+.option-menu .detail p{
+    line-height: 1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.15em;
+    padding-bottom: 5px;
+}
+
+
+
+/*
+
+
+BEACH PAGES
+
+
+*/
+
+#page-main .subtitle{
+    margin-top: 40px;
+    text-align: center;
+    font-family: "Antonio", cursive;
+    font-size: 2em;
+    color: #135e7e;
+    text-shadow: 3px 2px  #ddc5a3;
+    line-height: 2.5em;
+    margin-bottom: 40px;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    width: 90%;
+    margin: auto;
+}
+
+.info .info-emphasis{
+    font-family: "Caveat", cursive;
+    text-align: center;
+    font-size: 1.75em;
+    background-color:#135e7e90;
+    border-left: solid 5px #135e7e;
+    border-right: solid 5px #135e7e;
+    color: #ffffff;
+    padding: 5px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;    
+}
+
+.info .info-text{
+    background-color:#ddc5a3;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 6px;
+    line-height: 1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#135e7e;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-right: solid 5px #135e7e;
+    border-left: solid 5px #135e7e
+}
+
+
+
+/*
+
+
+CONTACT FORM
+
+
+*/
+
+.note{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    background-color: #ddc5a3;
+    padding: 10px 0px;
+}
+
+.note h5{
+    color: white;
+    font-family: "Antonio", cursive;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-shadow: 2px 2px #135e7e;
+}
+
+.note p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25em;
+    color: #ffffff;
+    line-height: 1.5em;
+}
+
+.instruct{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    font-size: 1.75em;
+    color:#135e7e;
+}
+
+form{
+    background-color: #ddc5a3;
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    padding:20px;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+
+form label{
+   font-family: "Caveat", cursive;
+   font-size: 1.5em;
+   color: #135e7e;
+    display: block;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+form input{
+    height: 2.5em;
+    border-radius: 5px;
+    display: block;
+    border: solid 3px #ddc5a390;
+}
+
+form textarea{
+    border-radius: 5px;
+    display: block;
+    border: solid 3px #ddc5a390;
+}
+
+input[type=submit]{
+    background-color: #135e7e;
+    color:white;
+    font-family: "Sansita Swashed", cursive;
+    font-size: 1.5em;
+    border: solid 3px white;
+}
+
+
+
+/*
+
+
+FOOTER
+
+
+*/
+
+.page-footer{
+    width: 100%;
+    height: 50px;
+    background-color: #135e7e80;
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    
+}
+
+.page-footer .footer-icons img{
+    
+    width: 30px;
+    padding-top: 10px;
+    margin-right: 10px;
+    filter: invert(100)
+}
+
+
+
+
+
+@media screen and (min-width:650px ){
+
+    #page{
+        grid-template-rows: 200px 1fr 1fr;
+    }
+
+    #page #header{
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 860px){
+    .main-options ul{
+        width: 40%;
+    }
+
+    .option .option-menu{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "image detail";
+        width: 50%;
+    }
+
+    .option-menu .image img{
+        width: 100%;
+        height: 300px;
+    }
+
+    .option-menu .detail{
+        width: 70%;
+    }
+
+    .info{
+        width: 30%;
+    }
+
+    .info .info-emphasis{
+        font-size: 2em;
+    }
+
+    .note{
+        width: 45%;
+    }
+    form{
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
